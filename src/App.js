@@ -129,17 +129,9 @@ const [contacts, setContacts] = useState(data);
             {contacts.map((contact) => (
               <Fragment>
                 {editContactId === contact.id ? (
-                  <EditableRow
-                    editFormData={editFormData}
-                    handleEditFormChange={handleEditFormChange}
-                    handleCancelClick={handleCancelClick}
-                  />
+                  <EditableRow editFormData={editFormData} handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} />
                 ) : (
-                  <ReadOnlyRow
-                    contact={contact}
-                    handleEditClick={handleEditClick}
-                    handleDeleteClick={handleDeleteClick}
-                  />
+                  <ReadOnlyRow contact={contact}  handleEditClick={handleEditClick} handleDeleteClick={handleDeleteClick} />
                 )}
               </Fragment>
             ))}
